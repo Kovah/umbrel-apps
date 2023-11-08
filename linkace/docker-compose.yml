@@ -1,0 +1,35 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: linkace_web_1
+      APP_PORT: 80
+
+  web:
+    image: linkace/linkace:simple
+    restart: on-failure
+    stop_grace_period: 1m
+    volumes:
+     - ${APP_DATA_DIR}/.env:/app/.env:rw
+     - ${APP_DATA_DIR}/backups:/app/storage/app/backups:rw
+     - ${APP_DATA_DIR}/logs:/app/storage/logs:rw
+    environment:
+      DB_CONNECTION: "mysql"
+      DB_HOST: "db"
+      DB_PORT: "3306"
+      DB_DATABASE: "linkace"
+      DB_USERNAME: "linkace"
+      DB_PASSWORD: "linkaceDbPassword"
+
+  db:
+    image: mariadb:10.7
+    user: "1000:1000"
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data/db:/var/lib/mysql:rw
+    environment:
+      MYSQL_ROOT_PASSWORD: "linkace"
+      MYSQL_USER: "linkace"
+      MYSQL_PASSWORD: "linkaceDbPassword"
+      MYSQL_DATABASE: "linkace"

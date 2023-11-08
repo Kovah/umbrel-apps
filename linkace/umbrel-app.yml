@@ -1,0 +1,44 @@
+manifestVersion: 1
+id: linkace
+category: files
+name: LinkAce
+version: "1.13.0"
+tagline: Your self-hosted bookmark archive. Free and open source.
+description: >-
+  LinkAce is a self-hosted archive to collect links of your favorite websites. Save articles to read them later, tools to use them in your next project, or historic content to archive it for the long term. LinkAce comes with a lot of features while keeping a clean and minimal interface.
+
+  Features:
+  
+  - Consistent Monitoring: All saved links are monitored. Get a notification when a website moves or becomes unavailable.
+  
+  - Automatic Archiving: Links are backed up via the Internet Archive after you saved them. Automagically.
+  
+  - Tags & Lists: Choose tags to categorize links, add them to custom lists to group them by a topic or occasion.
+  
+  - Darkmode: Whether you want it all the time or based on your operating system: LinkAce handles light and dark mode for you.
+  
+  - Search, filter, order: A powerful search helps you find the links you are looking for. Filter and order the results by various properties.
+  
+  - REST API: LinkAce offers a REST API for all features, so you can control and access all your data from other applications.
+  
+  - Share or keep it private: Your link archive can be accessed by guests, or kept private. Links, tags and lists can be set private separately.
+  
+  - RSS Feeds: Both private and public links are accessible via RSS feeds. Feeds are also available for tags and lists.
+  
+  - and many more...
+releaseNotes: ""
+dependencies: []
+developer: Kevin Woblick
+website: https://www.linkace.org
+repo: https://github.com/Kovah/LinkAce
+support: https://github.com/Kovah/LinkAce/discussions
+port: 80
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: Umbrel
+submission: https://github.com/getumbrel/umbrel/pull/334
